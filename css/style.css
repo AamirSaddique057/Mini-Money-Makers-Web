@@ -402,3 +402,279 @@ marquee span {
     padding: 14px 34px;
     border-radius: 36px;
 }
+
+/************
+ Our Story Section 
+*************/
+.our-story {
+    background-color: var(--section-bg-color-1);
+    color: var(--text-color-green);
+    padding: 95px 0;
+    position: relative;
+}
+.our-story .our-story-wrapper {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.our-story .image-area {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.our-story .image-area img {
+  display: block;
+  max-width: 546px;
+  width: 100%;
+  height: auto;
+}
+.our-story .our-story-wrapper .our-story-right-img {
+  position: absolute;
+  top: 15%;
+  right: 40%;
+  transform: translate(-15%, -30%);
+  width: 138px;
+}
+.our-story .our-story-wrapper .our-story-left-img {
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  transform: translate(-75%, -30%);
+  width: 138px;
+}
+.our-story .content-area {
+  width: 40%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.our-story .content-area h2 {
+    font-family: var(--font-family-section-title);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+.our-story .content-area h3 {
+    font-family: var(--font-family-heading);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 44px;
+    margin-bottom: 17px;
+}
+.our-story .content-area p {
+    font-family: var(--font-family-body);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 32px;
+}
+.our-story .content-area a {
+    width: 44%;
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-family-button);
+    font-size: 24px;
+    line-height: 35px;
+    color: var(--text-color-white);
+    background-color: var(--text-color-green);
+    padding: 14px 34px;
+    border-radius: 36px;
+}
+/************
+ Our Blog Section 
+*************/
+.our-blog {
+    padding: 95px 0;
+    color: var(--text-color-green);
+    position: relative;
+}
+.our-blog h2 {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    transform: translate(20%, 0%);
+}
+.our-blog .blog-wrapper {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.our-blog .blog-wrapper .blog-items {
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+}
+.our-blog .blog-wrapper .blog-item {
+    max-width: 540px;
+    background: #fff;
+    border-radius: 12px;
+    /* padding: 15px; */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+.our-blog .blog-wrapper .blog-item:hover {
+    transform: translateY(-5px);
+}
+.our-blog .blog-wrapper .blog-item h3 {
+    font-family: var(--font-family-heading);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 60px;
+}
+.our-blog .blog-wrapper .blog-item p {
+    font-family: 'Outfit-Regular';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.our-blog .blog-wrapper .blog-item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+/* scroll buttons */
+.slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.slider-controls button {
+    padding: 10px 15px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/************
+ instagram feed Section 
+*************/
+.instagram-feed {
+
+}
+.instagram-feed  .insta-feed-wrapper {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.instagram-feed .insta-img {
+    max-width: 267px;
+    width:100%;
+    flex-shrink: 0;
+}
+.instagram-feed .insta-feed-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/************
+ Footer Section 
+*************/
+footer {
+    background-color: var(--text-color-green);
+    padding: 58px 0;
+    color: var(--footer-text-color);
+}
+footer .footer-container {
+    max-width: 1786px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+footer .newsletter h3 {
+    font-family: var(--footer-heading-family);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+footer form {
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+footer form input[type="email"] {
+    max-width: 1574px;
+    width: 100%;
+    border: none;
+    font-family: var(--footer-email-family);
+    font-size: 40px;
+    background-color: transparent;
+}
+footer form input[type="email"]::placeholder {
+    color: var(--footer-text-color);
+}
+footer form button {
+    max-width: 172px;
+    width: 100%;
+    border-radius: 36px;
+    padding: 14px 34px;
+    border: none;
+    background-color: var(--text-color-white);
+    color: var(--text-color-green);
+    font-family: var(--footer-btn-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+footer .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 22px;
+}
+footer .footer-nav .menu {
+    display: flex;
+    gap: 70px;
+}
+footer .footer-nav .menu ul li {
+    list-style: none;
+}
+footer .footer-nav .menu ul li a {
+    text-decoration: none;
+    color: var(--footer-text-color);
+    font-family: var(--footer-menu-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+}
+footer .footer-logo {
+    max-width: 230px;
+    width: 100%;
+    margin: 70px 0 30px 0;
+}
+footer .footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+footer .footer-policy {
+    display: flex;
+    gap: 40px;
+}
+footer .footer-policy  p {
+    font-family: 'Outfit-Regular';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+footer .footer-policy a{
+    text-decoration: none;
+    color: #ffffff;
+}
