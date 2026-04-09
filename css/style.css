@@ -902,6 +902,68 @@ marquee span {
     font-weight: 400;
     line-height: 30px;
 }
+/*********************************************************************
+                              Blog Details Page 
+**********************************************************************/
+/************
+ blog Header Section 
+*************/
+.blog-detail-header {
+    max-width: 1920px;
+    width: 100%;
+    /* min-height: 818px; */
+    position: relative;
+}
+.blog-detail-header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.blog-detail-header .blog-detail-heading {
+    max-width: 776px;
+    width: 100%;
+    padding: 54px 83px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-color-green);
+    background-color: var(--section-bg-color-1);
+}
+.blog-detail-header .blog-detail-heading h1 {
+    font-family: var(--font-family-heading);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+}
+/************
+Blog Detail Content Section 
+*************/
+section.blog-detail-content {
+    background-color: var(--section-bg-color-1);
+    padding: 85px 0 200px 0;
+}
+section.blog-detail-content .blog-detail-content__wrapper {
+    max-width: 1142px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+section.blog-detail-content .content{
+  margin-bottom: 20px;
+  color: var(--text-color-green);
+  font-weight: 400;
+  line-height: 30px;
+}
+section.blog-detail-content .content p {
+  font-family: var(--font-family-body);
+  font-size: 24px;
+}
+section.blog-detail-content .content h2 {
+  font-family: var(--font-family-heading);
+  font-size: 40px;
+}
 /************
  Footer Section 
 *************/
