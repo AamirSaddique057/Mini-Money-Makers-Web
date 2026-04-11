@@ -141,30 +141,46 @@ header .main-nav ul li a {
 .hero-banner .hero-content {
   width: 50%;
   position: relative;
+  /* new method */
+    /* display: flex;
+    align-items: end; */
 }
-.hero-banner .hero-content .main-hero-bg img {
+.hero-banner .hero-content img {
   display: block;
   width: 100%;
   height: auto;
+  /* new mothed */
+    /* position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: 1; */
 }
 .hero-banner .hero-content .content {
   position: absolute;
-  top: 80%;
-  left: 10%;
-  transform: translate(-10%, -80%);
-  /* text-align: left; */
+  bottom: 6%; /* we can use 60px */
+  left: 2%; /* we can use 60px */
+  z-index:1;
+  padding: 20px;
+
+  /* new mothed */
+    /* z-index: 2;
+    position: relative;
+    padding: 55px; */
 }
 .hero-banner .hero-content .content h1 {
   font-family: var(--font-family-heading);
-  font-size: 165px;
+  /* font-size: 165px; */
+  font-size: clamp(30px, calc(9.5vw - 18px), 165px);
   font-weight: 400;
-  line-height: 148px;
+  /* line-height: 148px; */
+  line-height: clamp(60px, 7.71vw, 148px);
   color: var(--text-color-white);
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
 }
 .hero-banner .hero-content .content p {
     font-family: 'Outfit-Regular';
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: clamp(14px, 1.25vw, 24px);
     font-weight: 400;
     line-height: 30px;
     color: #ffffff;
@@ -174,11 +190,13 @@ header .main-nav ul li a {
     display: inline-block;
     text-decoration: none;
     font-family: 'Outfit-Regular';
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: clamp(14px, 1.25vw, 24px);
     line-height: 35px;
     color: #868CF7;
     background-color: #ffffff;
-    padding: 14px 34px;
+    padding: clamp(10px, 0.8vw, 14px) clamp(18px, 2vw, 34px);
+    /* padding: 14px 34px; */
     border-radius: 36px;
 }
 /* side image hero banner */
@@ -1063,3 +1081,53 @@ footer .footer-policy a{
     text-decoration: none;
     color: #ffffff;
 }
+
+/* Media Queery */
+
+@media (max-width: 1024px) {
+  /* Hero Banner  */
+    .hero-banner {
+      flex-direction: column;
+    }
+    .hero-right-img {
+        width: 100%;
+        height: 500px;
+    }
+    .hero-banner .hero-content {
+        width: 100%;
+        height: 500px;
+    }
+    .hero-right-img {
+        width: 100%;
+    }
+    .hero-banner .hero-content img {
+        height: 100%;
+    }
+    .hero-banner .hero-content .content h1 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    .hero-banner .hero-content .content p {
+        font-size: 24px;
+    }
+  }
+  @media (max-width: 512px) {
+      .hero-banner .hero-content .content h1 {
+          font-size: 56px;
+          line-height: 60px;
+      }
+      .hero-banner .hero-content .content p {
+          font-size: 20px;
+      }
+  }
+  @media (max-width: 380px) {
+      .hero-banner .hero-content .content h1 {
+          font-size: 42px;
+          line-height: 46px;
+      }
+      .hero-banner .hero-content .content p {
+          font-size: 18px;
+          line-height: 25px;
+
+      }
+  }
