@@ -100,7 +100,8 @@ header {
 }
 /* logo */
 header .logo {
-  max-width: 435px;
+  /* max-width: 435px; */
+  max-width: min(435px, 35%);
   width: 100%;
 }
 header .logo a {
@@ -113,7 +114,8 @@ header .logo a img {
 }
 /* menu */
 header .main-nav {
-  max-width: 530px;
+  /* max-width: 530px; */
+  max-width: min(530px, 60%);
   width:100%;
 }
 header .main-nav ul {
@@ -128,9 +130,51 @@ header .main-nav ul li a {
   text-decoration: none;
   color: var(--header-menu-color);
   font-family: var(--header-menu-font-family);
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: clamp(20px, 2vw, 24px);
 }
-
+/*********** 
+ Header Sidebar
+************/
+/* HIDE CHECKBOX */
+#header #menuToggle{
+  display:none;
+}
+#header .menu-btn
+/* OVERLAY */
+#header .overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index: 1;
+}
+#header#menuToggle:checked ~ .overlay{
+  opacity:1;
+  pointer-events:all;
+}
+/* SIDEBAR */
+#header .sidebar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:270px;
+  height:100vh;
+  background:#14532d;
+  color:white;
+  transform:translateX(-100%);
+  transition:.4s ease;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  z-index: 2;
+}
+#header #menuToggle:checked ~ .sidebar{
+  transform:translateX(0);
+}
 /*********** 
  hero banner 
 ************/
@@ -1131,6 +1175,11 @@ footer .footer-policy a{
 /* Media Queery */
 
 @media (max-width: 1024px) {
+  /* header */
+    header .main-nav ul {
+        justify-content: flex-end;
+        gap: 25px;
+    }
   /* Hero Banner  */
     .hero-banner {
       flex-direction: column;
@@ -1180,6 +1229,13 @@ footer .footer-policy a{
         height: 364px;
     }
   }
+
+  @media (max-width: 920px) {
+    header .main-nav ul {
+      justify-content: flex-end;
+      gap: 25px;
+    }
+   }
   @media(max-width:720px) {
     /* Hero Banner Section */
     .hero-banner .hero-content {
